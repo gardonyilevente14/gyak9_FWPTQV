@@ -5,21 +5,16 @@
 
 var drawPascal = function (sorSzam) {
     //Itt tortenik a pascal haromszog DOM elemeinek létrehpzása es elhelyezese
+    var ujSorDiv = document.getelementByID('pascal');
+
     for (var sor = 0; sor < 10; sor++) {
-        //új div létrehozása az új sornak
-        var szuloElem = document.getelementByID('szulo');
-        //új div osztálylistájához add hozzá a "sor"-t
-        szuloElem.classList.add('sor')
-        //új div-et add hozzá a "pascal" gyermekeihez
-        szuloElem.appendChild(ujElem);
+        var ujSorDiv = document.createElement('div')
+        ujSorDiv.classList.add('sor')
+        PascalDiv.appendChild(ujSorDiv);
         for (var oszlop = 0; oszlop <= sor; oszlop++) {
-            //új div létrehozása az új elemnek
-            var ujElem = document.createElement('div');
-            //új elem div osztálylistájához add hozzá az "elem"-et
-            ujElem.classList.add('újelem');
-            //teszteléshet .innerHTML = `${sor}:${oszlop}`
-            //legyen az innerHTML a megfelelő szám
-            //új elem div-et vedd fel a sor elemei közé
+            var ujElemDiv = document.createElement('div');
+            ujElem.classList.add('elem');
+            ujElemDiv.innerText =; //sor+
         }
     }
 }
